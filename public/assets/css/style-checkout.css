@@ -1,0 +1,447 @@
+/* Themes DuyenML */
+
+
+/* Design NDTPRO */
+
+:root {
+    /* các biến lưu màu sắc hay sử dụng */
+    /* để dùng 1 màu sắc thì gọi var(tên biến) tương ứng với màu sắc cần lấy */
+    /* vd: var(--color-primary) là mã màu #6cb7ff xanh ngọc bích */
+    --color-danger: #ff1a1a;
+    --color-danger-hover: #a80000;
+    --color-success: #51C95A;
+    --color-success-hover: #1c8c24;
+    --color-primary: #6772E5;
+    --color-primary-hover: #3441dc;
+    --color-info: #ABC4E7;
+    --color-info-hover: #739dd7;
+    --color-warning: #f2a837;
+    --color-warning-hover: #c68600;
+    --color-all: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    /* gọi biến màu sắc --color-all là màu xám */
+    color: var(--color-all);
+    outline: none;
+}
+
+a:hover,
+a.active {
+    color: var(--color-primary-hover);
+}
+
+.wrap:after {
+    position: relative;
+}
+
+.info-left {
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.info-right {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid #ccc;
+    background-color: #FAFAFA;
+}
+
+.content {
+    width: 80%;
+    padding: 50px;
+}
+
+.content.left {
+    margin-left: auto;
+}
+
+.content.right {
+    width: 60%;
+    margin-right: auto;
+}
+
+.content .top {
+    height: 150px;
+}
+
+.content .top * {
+    padding: 15px 0;
+}
+
+select:disabled {
+    background-color: #e1e1e1;
+}
+
+.customer-input input, .customer-input select, .customer-input textarea {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.customer-input input:focus, .customer-input select:focus, .customer-input textarea:focus {
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+[class*="btn-"] {
+    padding: 16px 30px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-checkout {
+    background-color: var(--color-primary);
+}
+
+.btn-checkout:hover {
+    background-color: rgba(103, 114, 229, 0.8);
+}
+
+.btn-back {
+    background-color: var(--color-warning);
+    display: block;
+}
+
+.btn-back:hover {
+    background-color: #f2a737d5;
+    color: #fff;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.table-cart {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-cart td {
+    padding: 6px;
+}
+
+.table-cart .p-image {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.table-cart .p-image img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    padding: 1px;
+    border-radius: 8px;
+}
+
+.table-cart span {
+    font-size: 0.85714em;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.15em 0.65em;
+    border-radius: 2em;
+    background-color: rgba(153,153,153,0.9);
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.table-cart .p-name {
+    text-transform: uppercase;
+}
+
+.table-cart .p-name p {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.table-cart .p-price {
+    text-align: right;
+    width: 20%;
+}
+
+.total-bill {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 1px solid #ccc;
+    font-size: 18px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+    margin: 0;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.loading_page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10004;
+    display: none;
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    left: 50%;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #6772E5;
+    margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    /* for laptop hd */
+    
+    .content {
+        width: 95%;
+        padding: 50px;
+    }
+
+    .content.left {
+        margin-left: auto;
+    }
+
+    .content.right {
+        width: 80%;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* cho màn hình có chiều ngang nhỏ hơn 768px */
+    /* for mobile */
+    
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    [class*="btn-"] {
+        width: 100%;
+    }
+
+    .wrap:after {
+        position: unset;
+    }
+    
+    .info-left, .info-right {
+        position: unset;
+        width: 100%;
+    }
+
+    .info-right {
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content.left {
+        margin-left: 0;
+    }
+
+    .content.right {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .content .top {
+        height: auto;
+    }
+
+    .content .top * {
+        padding: 15px 0;
+    }
+}
